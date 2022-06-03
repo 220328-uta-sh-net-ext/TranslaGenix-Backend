@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFPractice", "EFPractice.cs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TranslaGenixAPI", "..\TranslaGenixAPI\TranslaGenixAPI.csproj", "{F8604F31-FD9C-4696-8586-A505A49AAECA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DL", "..\DL\DL.csproj", "{E3849C9A-B7C5-4730-885D-B5A664718E65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F8604F31-FD9C-4696-8586-A505A49AAECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8604F31-FD9C-4696-8586-A505A49AAECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8604F31-FD9C-4696-8586-A505A49AAECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3849C9A-B7C5-4730-885D-B5A664718E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3849C9A-B7C5-4730-885D-B5A664718E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3849C9A-B7C5-4730-885D-B5A664718E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3849C9A-B7C5-4730-885D-B5A664718E65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
