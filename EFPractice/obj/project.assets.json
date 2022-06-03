@@ -1927,11 +1927,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\EFPractice\\EFPractice.csproj",
+      "projectUniqueName": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
       "projectName": "EFPractice",
-      "projectPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\EFPractice\\EFPractice.csproj",
+      "projectPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
       "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\EFPractice\\obj\\",
+      "outputPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
