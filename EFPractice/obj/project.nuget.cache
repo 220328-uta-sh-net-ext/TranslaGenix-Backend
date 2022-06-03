@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HKRjvB8tzsZstCTikD9cnUOFnQHemRVs6mUKd7PRBc2r1qWEyYVUo2edaZ4aGjVxFa87AKWzyuxBNdhy9JQqdg==",
+  "dgSpecHash": "Z9HkzBACDDWN2DP3ANX3lqNFMeCxzkjmwcQanf5qi1YYhr1VXHHXXXWP7NHSE1CwGNc3e0pgfn3FFO5AsMUAhg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\EFPractice\\EFPractice.csproj",
+  "projectFilePath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Owner\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.5\\microsoft.aspnetcore.cryptography.internal.6.0.5.nupkg.sha512",

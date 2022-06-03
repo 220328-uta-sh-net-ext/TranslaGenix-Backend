@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPractice", "EFPractice.csproj", "{7746F49D-B6F8-4692-93CB-B81DD3761F28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFPractice", "EFPractice.csproj", "{7746F49D-B6F8-4692-93CB-B81DD3761F28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslaGenixAPI", "..\TranslaGenixAPI\TranslaGenixAPI.csproj", "{F8604F31-FD9C-4696-8586-A505A49AAECA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7746F49D-B6F8-4692-93CB-B81DD3761F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7746F49D-B6F8-4692-93CB-B81DD3761F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7746F49D-B6F8-4692-93CB-B81DD3761F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8604F31-FD9C-4696-8586-A505A49AAECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8604F31-FD9C-4696-8586-A505A49AAECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8604F31-FD9C-4696-8586-A505A49AAECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8604F31-FD9C-4696-8586-A505A49AAECA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
