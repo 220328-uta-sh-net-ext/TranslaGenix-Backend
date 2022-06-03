@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DL
 {
-    public interface IPoints
+    public interface IPointsRepo
     {
         //Update by user name
         PointsSystem UpdatePoints(string name);
