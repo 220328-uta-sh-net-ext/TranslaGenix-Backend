@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\TranslaGenixAPI\\TranslaGenixAPI.csproj": {}
+    "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\TranslaGenixAPI\\TranslaGenixAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\TranslaGenixAPI\\TranslaGenixAPI.csproj": {
+    "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\TranslaGenixAPI\\TranslaGenixAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\TranslaGenixAPI\\TranslaGenixAPI.csproj",
+        "projectUniqueName": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\TranslaGenixAPI\\TranslaGenixAPI.csproj",
         "projectName": "TranslaGenixAPI",
-        "projectPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\TranslaGenixAPI\\TranslaGenixAPI.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\TranslaGenixAPI\\obj\\",
+        "projectPath": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\TranslaGenixAPI\\TranslaGenixAPI.csproj",
+        "packagesPath": "C:\\Users\\icrbo\\.nuget\\packages\\",
+        "outputPath": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\TranslaGenixAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\icrbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,6 +44,16 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.14.0, )"
@@ -71,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

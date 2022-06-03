@@ -2008,23 +2008,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Owner\\.nuget\\packages\\": {},
+    "C:\\Users\\icrbo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
+      "projectUniqueName": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
       "projectName": "EFPractice",
-      "projectPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
-      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\obj\\",
+      "projectPath": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
+      "packagesPath": "C:\\Users\\icrbo\\.nuget\\packages\\",
+      "outputPath": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\EFPractice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\icrbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2095,7 +2095,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\DL\\DL.csproj": {}
+    "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\DL\\DL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\DL\\DL.csproj": {
+    "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\DL\\DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\DL\\DL.csproj",
+        "projectUniqueName": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\DL\\DL.csproj",
         "projectName": "DL",
-        "projectPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\DL\\DL.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\DL\\obj\\",
+        "projectPath": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\DL\\DL.csproj",
+        "packagesPath": "C:\\Users\\icrbo\\.nuget\\packages\\",
+        "outputPath": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\DL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\icrbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj": {
-                "projectPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj"
+              "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj": {
+                "projectPath": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj"
               }
             }
           }
@@ -47,6 +47,28 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -62,24 +84,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj": {
+    "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
+        "projectUniqueName": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
         "projectName": "EFPractice",
-        "projectPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\obj\\",
+        "projectPath": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
+        "packagesPath": "C:\\Users\\icrbo\\.nuget\\packages\\",
+        "outputPath": "D:\\Revature\\dotnet-Training-220328\\Project 3\\TranslaGenix-Backend\\EFPractice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\icrbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -150,7 +172,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
