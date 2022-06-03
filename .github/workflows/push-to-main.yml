@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  WORKING_DIRECTORY: TranslaGenix-Backend
+  WORKING_DIRECTORY: TranslaGenixAPI
 
 jobs:
   ci:
@@ -19,8 +19,8 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore ${{env.WORKING_DIRECTORY}}/TranslaGenixAPI
+      run: dotnet restore ${{env.WORKING_DIRECTORY}}
     - name: Build
-      run: dotnet build --no-restore ${{env.WORKING_DIRECTORY}}/TranslaGenixAPI
+      run: dotnet build --no-restore ${{env.WORKING_DIRECTORY}}
     - name: Test
       run: dotnet test --no-build --verbosity normal ${{env.WORKING_DIRECTORY}}
