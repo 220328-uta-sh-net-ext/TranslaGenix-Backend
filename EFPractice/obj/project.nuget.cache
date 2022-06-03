@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Z9HkzBACDDWN2DP3ANX3lqNFMeCxzkjmwcQanf5qi1YYhr1VXHHXXXWP7NHSE1CwGNc3e0pgfn3FFO5AsMUAhg==",
+  "dgSpecHash": "7BfGP4UdqzoV/l9Rz5hVsIjrWuCH0ZMIBe6HcjdqlAHrmI8MISgVoDPgV8VYFGh8hU8f8N9NuLnCNYxtMCgAWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Owner\\Desktop\\Revature\\Project 3\\TranslaGenix-Backend\\EFPractice\\EFPractice.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\Owner\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.8.0\\microsoft.identitymodel.protocols.openidconnect.6.8.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.8.0\\microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

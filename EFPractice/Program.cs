@@ -2,4 +2,4 @@
 using EFPractice.Models;
 
 Console.WriteLine("Hello, World!");
-using Context myContext = new Context();
+//using Context myContext = new Context();

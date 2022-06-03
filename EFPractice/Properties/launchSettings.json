@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EFPractice": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
