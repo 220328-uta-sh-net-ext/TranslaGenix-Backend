@@ -11,7 +11,7 @@ namespace TranslaGenixAPI.Controllers
     {
         private IUserRepo repo;
         private static List<User> users = new List<User>();
-        public UserController(IUserRepo repo)
+        public UserController(IUserRepo repo, IPointsRepo prepo)
         {
             this.repo = repo;
         }
@@ -52,6 +52,54 @@ namespace TranslaGenixAPI.Controllers
             return CreatedAtAction("Get", user);
         }
 
+        [HttpGet]
+        [Route("Get User by Username")]
+        [ProducesResponseType(200)]
+        public ActionResult<List<User>> GetbyUsername(string username)
+        {
+            try
+            {
+                var filtereduser = repo.GetUserByUserName(username);
+                return Ok(filtereduser);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"{username} is not in the database");
+            }
+        }
+
+        [HttpGet]
+        [Route("Get User by Email")]
+        [ProducesResponseType(200)]
+        public ActionResult GetbyEmail(string email)
+        {
+            try
+            {
+                var filteredemail = repo.GetUserByEmail(email);
+                return Ok(filteredemail);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"{email} is not in the database");
+            }
+        }
+
+        [HttpGet]
+        [Route("Get User by Firstname")]
+        [ProducesResponseType(200)]
+        public ActionResult GetbyFirstname(string firstname)
+        {
+            try
+            {
+                var filteredfirstname = repo.GetUserByFirstName(firstname);
+                return Ok(filteredfirstname);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"User {firstname} has been deleted from the database");
+            }
+        }
+
         [HttpDelete]
         [Route("Delete User")]
         [ProducesResponseType(200)]
@@ -73,7 +121,25 @@ namespace TranslaGenixAPI.Controllers
             {
                 return BadRequest("Bad Request: " + ex);
             }
-            return Ok($"User with id number {username} is deleted");
+            return Ok($" {username} is deleted");
+        }
+
+        [HttpPut]
+        [Route("Update User")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public ActionResult UpdateUser(User user, string email)
+        {
+            try
+            {
+                var updateduser = users.Find(x => x.Email == email);
+                updateduser.Email = user.Email;
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Bad Request: " + ex);
+            }
+            return Ok("user email has been updated");
         }
     }
 }
