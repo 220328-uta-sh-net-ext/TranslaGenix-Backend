@@ -87,3 +87,4 @@ jobs:
         push: true
         # List of tags
         tags: innsight/translagenix:${{github.sha}}
+
