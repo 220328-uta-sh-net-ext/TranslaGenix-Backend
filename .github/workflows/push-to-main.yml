@@ -71,9 +71,9 @@ jobs:
       uses: docker/login-action@v2.0.0
       with:
         # Username used to log against the Docker registry
-        username: ${{ secrets.DOCKER_USERNAME }}
+        username: ${{ secrets.TEST_USERNAME }}
         # Password or personal access token used to log against the Docker registry
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        password: ${{ secrets.TEST_TOKEN }}
         
     - name: Build and push Docker images
       # You may pin to the exact commit or the version.
@@ -86,5 +86,5 @@ jobs:
         # Push is a shorthand for --output=type=registry
         push: true
         # List of tags
-        tags: innsight/translagenix:${{github.sha}}
+        tags: daniel23osz/translagenixtest:${{github.sha}}
 
