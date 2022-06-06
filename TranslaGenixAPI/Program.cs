@@ -25,6 +25,7 @@ string connectionString = Config.GetConnectionString("SQLDatabase");
 
 builder.Services.AddDbContext<TGContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddScoped<IUserRepo, UserRepo>();
+builder.Services.AddScoped<IPointsRepo, PointsRepo>();
 
 var app = builder.Build();
 
