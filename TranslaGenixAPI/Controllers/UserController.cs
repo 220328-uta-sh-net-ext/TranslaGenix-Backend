@@ -51,5 +51,29 @@ namespace TranslaGenixAPI.Controllers
             //Log.Information("New user created w/ username: " + UserName + " @ AddNewUser in UserC");
             return CreatedAtAction("Get", user);
         }
+
+        [HttpDelete]
+        [Route("Delete User")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public ActionResult DeleteUser(string username)
+        {
+            var deleteduser = new User();
+            try
+            {
+                deleteduser = repo.GetUserByUserName(username);
+
+                if (deleteduser == null)
+                {
+                    return NotFound($"{username} isn't found in the database");
+                }
+                repo.DeleteUser(username);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Bad Request: " + ex);
+            }
+            return Ok($"User with id number {username} is deleted");
+        }
     }
 }

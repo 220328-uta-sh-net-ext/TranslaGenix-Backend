@@ -43,6 +43,6 @@ namespace DL
         /// Removes a user by ID from the DB
         /// </summary>
         /// <param name="id"></param>
-        void DeleteUser(int id);
+        void DeleteUser(string UserName);
     }
 }
