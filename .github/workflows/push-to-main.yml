@@ -45,7 +45,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./TranslaGenixAPI
     - name: Test
-      run: dotnet test --verbosity normal --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+      run: dotnet test --verbosity normal ./TranslaGenixAPI --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
       
     - name: Build and analyze
       env:
@@ -54,5 +54,5 @@ jobs:
       shell: powershell
       run: |
         .\.sonar\scanner\dotnet-sonarscanner begin /k:"220328-uta-sh-net-ext_TranslaGenix-Backend" /o:"220328-uta-sh-net-ext" /d:sonar.login="${{ secrets.SONAR_TOKEN_BACKEND }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.opencover.xml" -d:sonar.cs.vstest.reportsPaths="**/TestResults/*.trx"
-        dotnet build 
+        dotnet build ./TranslaGenixAPI
         .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN_BACKEND }}"

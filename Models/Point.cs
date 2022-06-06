@@ -12,7 +12,7 @@ namespace Models
         [Column("id")]
         public int Id { get; set; }
         [Column("userId")]
-        //Manually added userId being a foregin Key
+        // Manually added userId being a foregin Key
         // ALTER TABLE Points ADD FOREIGN KEY (userid) REFERENCES users(id);
         public int userId { get; set; }
         [Column("points")]
