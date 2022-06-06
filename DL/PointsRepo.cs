@@ -78,7 +78,10 @@ namespace DL
         {
             var temp = db.points.Where(u => u.Id == id).FirstOrDefault();
             if (temp != null)
+            {
+                temp.Points += 1;
                 return UpdatePoints(temp);
+            }
             return default;
         }
 
@@ -89,7 +92,10 @@ namespace DL
                 return default;
             var tempPoints = db.points.Where(u => u.Id == tempUser.Id).FirstOrDefault();
             if (tempPoints != null)
+            {
+                tempPoints.Points += 1;
                 return UpdatePoints(tempPoints);
+            }
             return default;
         }
 
