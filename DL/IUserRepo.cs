@@ -6,7 +6,9 @@ namespace DL
     {
         User AddUser(User user);
         List<User> GetAllUsers();
-        User GetUserByName(string name);
+        User GetUserByUserName(string UserName);
+        User GetUserByFirstName(string FirstName);
+        User GetUserByEmail(string Email);
         User Update(User user);
         void DeleteUser(int id);
     }

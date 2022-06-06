@@ -31,9 +31,18 @@ namespace DL
             return db.users.ToList();
         }
 
-        public User GetUserByName(string name)
+        public User GetUserByUserName(string UserName)
         {
-            return db.users.Where(u => u.Username == name).FirstOrDefault();
+            return db.users.Where(u => u.Username == UserName).FirstOrDefault();
+        }
+
+        public User GetUserByFirstName(string FirstName)
+        {
+            return db.users.Where(u => u.FirstName == FirstName).FirstOrDefault();
+        }
+        public User GetUserByEmail(string email)
+        {
+            return db.users.Where(u => u.Email == email).FirstOrDefault();
         }
 
         public User Update(User user)
