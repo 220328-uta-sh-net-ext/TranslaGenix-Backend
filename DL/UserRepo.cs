@@ -13,7 +13,7 @@ namespace DL
         {
             db.users.Add(user);
             Point newPoint = new Point();
-            newPoint.user = user;
+            newPoint.userId = user.Id;
             newPoint.Points = 0;
             db.points.Add(newPoint);
             db.SaveChanges();
