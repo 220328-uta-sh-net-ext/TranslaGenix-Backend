@@ -21,11 +21,14 @@ namespace DL
             return user;
         }
 
-        public void DeleteUser(int id)
+        public void DeleteUser(string UserName)
         {
-            var deletethis = db.users.Where(u => u.Id == id).FirstOrDefault();
+            var deletethis = db.users.Where(u => u.Username == UserName).FirstOrDefault();
             if (deletethis != null)
             {
+                var deletePoint = db.points.Where(a => a.userId == deletethis.Id).FirstOrDefault();
+                if(deletePoint != null)
+                    db.points.Remove(deletePoint);
                 db.users.Remove(deletethis);
                 db.SaveChanges();
             }
