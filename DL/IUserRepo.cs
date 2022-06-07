@@ -38,7 +38,7 @@ namespace DL
         /// </summary>
         /// <param name="user"></param>
         /// <returns>Returns the information that was used to update a user</returns>
-        User Update(int id, User user);
+        User Update(string email, string newusername, string newFirstName, string newLastName);
         /// <summary>
         /// Removes a user by ID from the DB
         /// </summary>

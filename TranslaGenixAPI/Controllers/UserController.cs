@@ -129,11 +129,11 @@ namespace TranslaGenixAPI.Controllers
         [Route("UpdateUser")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public ActionResult UpdateUser(int id, [FromBody] User user)
+        public ActionResult UpdateUser(string email, string? newusername, string? newFirstName, string? newLastName)
         {
             try
             {
-                var updateduser = repo.Update(id, user);
+                var updateduser = repo.Update(email, newusername, newFirstName, newLastName);
                 return Ok(updateduser);
             }
             catch (Exception ex)
