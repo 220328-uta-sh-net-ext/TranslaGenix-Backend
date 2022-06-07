@@ -4,7 +4,7 @@
 
 namespace DL.Migrations
 {
-    public partial class V3 : Migration
+    public partial class Confused : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
