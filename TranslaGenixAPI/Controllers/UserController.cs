@@ -16,7 +16,7 @@ namespace TranslaGenixAPI.Controllers
             this.repo = repo;
         }
         [HttpGet]
-        [Route("Get All Users")]
+        [Route("GetAllUsers")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<User>> Get()
         {
@@ -33,7 +33,7 @@ namespace TranslaGenixAPI.Controllers
             return Ok(users);
         }
         [HttpPost]
-        [Route("Add User")]
+        [Route("AddUser")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult AddNewUser([FromQuery][BindRequired] User user)
@@ -53,7 +53,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Get User by Username")]
+        [Route("GetUserByUsername")]
         [ProducesResponseType(200)]
         public ActionResult<List<User>> GetbyUsername(string username)
         {
@@ -69,7 +69,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Get User by Email")]
+        [Route("GetUserByEmail")]
         [ProducesResponseType(200)]
         public ActionResult GetbyEmail(string email)
         {
@@ -85,7 +85,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Get User by Firstname")]
+        [Route("GetUserByFirstname")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult GetbyFirstname(string firstname)
@@ -102,7 +102,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("Delete User")]
+        [Route("DeleteUser")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult DeleteUser(string username)
@@ -126,7 +126,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpPut]
-        [Route("Update User")]
+        [Route("UpdateUser")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult UpdateUser(int id, [FromBody] User user)
