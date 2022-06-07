@@ -15,6 +15,7 @@ namespace DL
         }
         public DbSet<User> users { get; set; }
         public DbSet<Point> points { get; set; }
+        public DbSet<Words> wordList { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
@@ -26,37 +27,12 @@ namespace DL
                 .Property(a => a.Id)
                 .HasColumnName("id")
                 .ValueGeneratedOnAdd();
-            //different word models
-            /*modelBuilder.Entity<Calendar>()
-                .Property(a => a.Id)
-                .HasColumnName("id")
-                .ValueGeneratedOnAdd();
-            modelBuilder.Entity<Colors>()
-                .Property(a => a.Id)
-                .HasColumnName("id")
-                .ValueGeneratedOnAdd();
-            modelBuilder.Entity<CommonExpressions>()
-                .Property(a => a.Id)
-                .HasColumnName("id")
-                .ValueGeneratedOnAdd();
-            modelBuilder.Entity<Greetings>()
-                .Property(a => a.Id)
-                .HasColumnName("id")
-                .ValueGeneratedOnAdd();
-            modelBuilder.Entity<Numbers>()
-                .Property(a => a.Id)
-                .HasColumnName("id")
-                .ValueGeneratedOnAdd();
-            modelBuilder.Entity<Travel>()
-                .Property(a => a.Id)
-                .HasColumnName("id")
-                .ValueGeneratedOnAdd();*/
             modelBuilder.Entity<Words>()
                 .Property(a => a.Id)
                 .HasColumnName("id")
                 .ValueGeneratedOnAdd();
         }
-        // dotnet ef migrations add addWords -c TGContext --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
+        // dotnet ef migrations add FixWords -c TGContext --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
         // dotnet ef database update --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
 
     }
