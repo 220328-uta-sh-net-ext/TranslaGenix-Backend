@@ -10,12 +10,10 @@ namespace TranslaGenixAPI.Controllers
     public class PointsController : ControllerBase
     {
         private IPointsRepo repo;
-        private IUserRepo userRepo;
         private static List<Point> points = new List<Point>();
-        public PointsController(IPointsRepo repo, IUserRepo userRepo)
+        public PointsController(IPointsRepo repo)
         {
             this.repo = repo;
-            this.userRepo = userRepo;
         }
 
         [HttpGet]
