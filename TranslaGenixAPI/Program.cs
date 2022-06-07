@@ -10,7 +10,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(
         name: pol,
         policy => {
-            policy.WithOrigins("'http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+            policy.WithOrigins("https://translagenix.azurewebsites.net/").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
         }
         );
 });

@@ -32,7 +32,7 @@ namespace DL
                 .HasColumnName("id")
                 .ValueGeneratedOnAdd();
         }
-        // dotnet ef migrations add FixWords -c TGContext --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
+        // dotnet ef migrations add Init -c TGContext --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
         // dotnet ef database update --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
 
     }
