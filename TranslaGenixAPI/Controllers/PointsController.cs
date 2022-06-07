@@ -17,9 +17,8 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Get All Points")]
+        [Route("GetAllPoints")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-
         public ActionResult<List<Point>> Get()
         {
             try
@@ -34,7 +33,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpPost]
-        [Route("Add Points")]
+        [Route("AddPoints")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
@@ -55,7 +54,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Get Highst Point")]
+        [Route("GetHighstPoint")]
         [ProducesResponseType(StatusCodes.Status200OK)]
 
         public ActionResult <Point> GetHighestPoint()
@@ -72,7 +71,7 @@ namespace TranslaGenixAPI.Controllers
                 return Ok(newPoint);
             }
         [HttpGet]
-        [Route("Get Point by ID")]
+        [Route("GetPointByID")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<Point>> GetPointById(int id)
         {
@@ -87,7 +86,7 @@ namespace TranslaGenixAPI.Controllers
             }
         }
         [HttpGet]
-        [Route("Get Point by User Name")]
+        [Route("GetPointByUserName")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<Point>> GetPointByUserName(string UserName)
         {
@@ -102,7 +101,7 @@ namespace TranslaGenixAPI.Controllers
             }
         }
         [HttpPut]
-        [Route("Update Points")]
+        [Route("UpdatePoints")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult UpdatePoints(string name, int addpoint)
@@ -124,7 +123,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpPut]
-        [Route("Increase Points By Id")]
+        [Route("IncreasePointsById")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult IncreasePointsById(int id)
@@ -142,7 +141,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpPut]
-        [Route("Increase Points By UserName")]
+        [Route("IncreasePointsByUserName")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult IncreasePointsByUserName(string username)
@@ -160,7 +159,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("Delete Points by Id")]
+        [Route("DeletePointsbyId")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult DeletePointbyID(int Id)
@@ -177,7 +176,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("Delete Points by User Name")]
+        [Route("DeletePointsByUserName")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult DeletePointbyUserName(string name)

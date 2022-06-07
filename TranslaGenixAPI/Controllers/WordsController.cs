@@ -17,7 +17,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Get All Words")]
+        [Route("GetAllWords")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult<List<Words>> Get()
@@ -34,7 +34,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Get Random Word")]
+        [Route("GetRandomWord")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult<Words> GetRandomWord()
@@ -52,7 +52,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Get Word by Tag")]
+        [Route("GetWordByTag")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult<List<Words>> Get(String tag)
@@ -70,7 +70,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpPost]
-        [Route("Add Word")]
+        [Route("AddWord")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         public ActionResult AddNewWord([FromQuery][BindRequired] Words newword)
