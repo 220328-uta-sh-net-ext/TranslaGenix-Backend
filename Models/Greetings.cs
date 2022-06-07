@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace Models
+/*namespace Models
 {
     [Table("greetings")]
     public class Greetings
@@ -15,3 +15,4 @@ namespace Models
         public string Name { get; set; }
     }
 }
+*/
