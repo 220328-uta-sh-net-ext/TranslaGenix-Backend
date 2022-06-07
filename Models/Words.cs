@@ -3,15 +3,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-/*namespace Models
+namespace Models
 {
-    [Table("commonexpressions")]
-    public class CommonExpressions
+    [Table("words")]
+    [Index(nameof(Word), IsUnique = true)]
+    public class Words
     {
         [Key]
         [Column("id")]
         public int Id { get; set; }
-        [Column("name")]
-        public string Name { get; set; }
+        [Column("word")]
+        public string Word { get; set; }
+        [Column("tag")]
+        public string Tag { get; set; }
     }
-}*/
+}

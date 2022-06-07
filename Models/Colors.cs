@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-namespace Models
+/*namespace Models
 {
     [Table("colors")]
     public class Colors
@@ -14,4 +14,4 @@ namespace Models
         public string Name { get; set; }
 
     }
-}
+}*/

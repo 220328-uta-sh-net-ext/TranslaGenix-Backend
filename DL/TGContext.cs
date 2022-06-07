@@ -27,7 +27,7 @@ namespace DL
                 .HasColumnName("id")
                 .ValueGeneratedOnAdd();
             //different word models
-            modelBuilder.Entity<Calendar>()
+            /*modelBuilder.Entity<Calendar>()
                 .Property(a => a.Id)
                 .HasColumnName("id")
                 .ValueGeneratedOnAdd();
@@ -50,9 +50,13 @@ namespace DL
             modelBuilder.Entity<Travel>()
                 .Property(a => a.Id)
                 .HasColumnName("id")
+                .ValueGeneratedOnAdd();*/
+            modelBuilder.Entity<Words>()
+                .Property(a => a.Id)
+                .HasColumnName("id")
                 .ValueGeneratedOnAdd();
         }
-        // dotnet ef migrations add newModels -c TGContext --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
+        // dotnet ef migrations add addWords -c TGContext --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
         // dotnet ef database update --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
 
     }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace Models
+/*namespace Models
 {
     [Table("numbers")]
     public class Numbers
@@ -14,4 +14,4 @@ namespace Models
         [Column("name")]
         public string Name { get; set; }
     }
-}
+}*/

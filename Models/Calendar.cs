@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-
+/*
 namespace Models
 {
     [Table("calender")]
@@ -15,3 +15,4 @@ namespace Models
         public string Name { get; set; }
     }
 }
+*/
