@@ -53,11 +53,20 @@ namespace DL
             return db.users.Where(u => u.Email == email).FirstOrDefault();
         }
 
-        public User Update(User user)
+        public User Update(int id, User user)
         {
-            db.users.Update(user);
-            db.SaveChanges();
-            return user;
+            var _user = db.users.FirstOrDefault(u => u.Id == id);
+            if (_user != null)
+            {
+                _user.Email = user.Email;
+                db.SaveChanges();
+            }
+            return _user;
+        }
+
+        public User Update()
+        {
+            throw new NotImplementedException();
         }
     }
 }
