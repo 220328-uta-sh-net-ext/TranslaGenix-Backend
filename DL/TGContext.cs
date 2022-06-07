@@ -26,8 +26,33 @@ namespace DL
                 .Property(a => a.Id)
                 .HasColumnName("id")
                 .ValueGeneratedOnAdd();
+            //different word models
+            modelBuilder.Entity<Calendar>()
+                .Property(a => a.Id)
+                .HasColumnName("id")
+                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<Colors>()
+                .Property(a => a.Id)
+                .HasColumnName("id")
+                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<CommonExpressions>()
+                .Property(a => a.Id)
+                .HasColumnName("id")
+                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<Greetings>()
+                .Property(a => a.Id)
+                .HasColumnName("id")
+                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<Numbers>()
+                .Property(a => a.Id)
+                .HasColumnName("id")
+                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<Travel>()
+                .Property(a => a.Id)
+                .HasColumnName("id")
+                .ValueGeneratedOnAdd();
         }
-        // dotnet ef migrations add Init -c TGContext --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
+        // dotnet ef migrations add newModels -c TGContext --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
         // dotnet ef database update --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
 
     }
