@@ -39,17 +39,17 @@ namespace TranslaGenixAPI.Controllers
 
         public ActionResult AddPoint([FromQuery][BindRequired] Point point)
         {
-          
+
             try
             {
                 repo.AddPoint(point);
             }
             catch (Exception ex)
             {
-                
+
                 return BadRequest("Bad Request: " + ex);
             }
-            
+
             return CreatedAtAction("Get", point);
         }
 
@@ -57,19 +57,19 @@ namespace TranslaGenixAPI.Controllers
         [Route("GetHighstPoint")]
         [ProducesResponseType(StatusCodes.Status200OK)]
 
-        public ActionResult <Point> GetHighestPoint()
-         {
+        public ActionResult<Point> GetHighestPoint()
+        {
             Point newPoint = new Point();
             try
             {
-               newPoint = repo.GetHighestPoint();
+                newPoint = repo.GetHighestPoint();
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-                return Ok(newPoint);
-            }
+            return Ok(newPoint);
+        }
         [HttpGet]
         [Route("GetPointByID")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -108,12 +108,12 @@ namespace TranslaGenixAPI.Controllers
         {
             try
             {
-                
+
                 var pointAdd = repo.GetPointByUserName(name);
                 pointAdd.Points += addpoint;
 
                 var ret = repo.UpdatePoints(pointAdd);
-                
+
             }
             catch (Exception ex)
             {
@@ -130,7 +130,7 @@ namespace TranslaGenixAPI.Controllers
         {
             try
             {
-                 repo.IncreasePointsById(id);
+                repo.IncreasePointsById(id);
 
             }
             catch (Exception ex)
@@ -163,9 +163,9 @@ namespace TranslaGenixAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult DeletePointbyID(int Id)
-        {           
+        {
             try
-            {            
+            {
                 repo.DeletePointbyID(Id);
             }
             catch (Exception ex)
@@ -190,6 +190,38 @@ namespace TranslaGenixAPI.Controllers
                 return BadRequest("Bad Request: " + ex);
             }
             return Ok($" {name} is deleted");
+        }
+
+        [HttpGet]
+        [Route("GetLeaderboard")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(400)]
+        public ActionResult<List<LeaderBoard>> GetLeaderBoard()
+        {
+            List<Point> listofpoints = new List<Point>();
+            try
+            {
+                listofpoints = repo.GetAllPoints();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            if (listofpoints.Count == 0)
+                return BadRequest("No data in points");
+            listofpoints.Sort(delegate (Point p1, Point p2)
+            {
+                return p2.Points.CompareTo(p1.Points);
+            });
+            var leaderboard = new List<LeaderBoard>();
+            foreach (Point p in listofpoints)
+            {
+                var val = new LeaderBoard();
+                val.Name = repo.getUserNameByPoints(p);
+                val.point = p.Points;
+                leaderboard.Add(val);
+            }
+            return Ok(leaderboard);
         }
     }
 
