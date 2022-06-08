@@ -60,16 +60,10 @@ namespace DL
             {
                 if(newFirstName != null && newFirstName != "")
                     _user.FirstName = newFirstName;
-                else
-                    _user.FirstName = _user.FirstName;
                 if (newLastName != null && newLastName != "")
                     _user.LastName = newLastName;
-                else
-                    _user.LastName = _user.LastName;
                 if (newusername != null && newusername != "")
                     _user.Username = newusername;
-                else
-                    _user.Username = _user.Username;
                 db.users.Update(_user);
                 db.SaveChanges();
             }
