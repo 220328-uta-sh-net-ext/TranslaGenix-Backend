@@ -9,20 +9,20 @@ namespace DL
         {
             this.db = db;
         }
-        public SimpleUser AddUser(SimpleUser user)
+        public async Task<SimpleUser> AddUser(SimpleUser user)
         {
             db.simpleUserList.Add(user);
-            db.SaveChanges();
+            db.SaveChangesAsync();
             return user;
         }
 
-        public void DeleteSimpleUser(string UserName)
+        public async Task DeleteSimpleUser(string UserName)
         {
             var deletethis = db.simpleUserList.Where(u => u.Username == UserName).FirstOrDefault();
             if (deletethis == null)
                 return;
             db.simpleUserList.Remove(deletethis);
-            db.SaveChanges();
+            db.SaveChangesAsync();
             return;
         }
 

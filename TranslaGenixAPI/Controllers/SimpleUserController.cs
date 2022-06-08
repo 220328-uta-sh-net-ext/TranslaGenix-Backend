@@ -36,12 +36,12 @@ namespace TranslaGenixAPI.Controllers
         [Route("AddSimpleUser")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult AddNewUser([FromQuery][BindRequired] SimpleUser user)
+        public async Task<ActionResult> AddNewUser([FromQuery][BindRequired] SimpleUser user)
         {
             //Try to add a new user
             try
             {
-                repo.AddUser(user);
+                await repo.AddUser(user);
             }
             catch (Exception ex)
             {
@@ -50,6 +50,23 @@ namespace TranslaGenixAPI.Controllers
             }
             //Log.Information("New user created w/ username: " + UserName + " @ AddNewUser in UserC");
             return CreatedAtAction("Get", user);
+        }
+        [HttpDelete]
+        [Route("DeleteSimpleUser")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public async Task<ActionResult> DeleteUser(string username)
+        {
+            var deleteduser = new User();
+            try
+            {
+                await repo.DeleteSimpleUser(username);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Bad Request: " + ex);
+            }
+            return Ok($"{username} has been deleted from the database");
         }
     }
 }
