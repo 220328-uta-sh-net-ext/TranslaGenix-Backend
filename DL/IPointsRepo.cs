@@ -63,5 +63,7 @@ namespace DL
         /// </summary>
         /// <param name="name"></param>
         void DeletePointbyUserName(string name);
+
+        public string getUserNameByPoints(Point point);
     }
 }

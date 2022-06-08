@@ -113,5 +113,10 @@ namespace DL
             db.SaveChanges();
             return point;
         }
+
+        public string getUserNameByPoints(Point point)
+        {
+            return db.users.Where(u => u.Id == point.userId).FirstOrDefault().Username;
+        }
     }
 }
