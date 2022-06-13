@@ -5,6 +5,8 @@ using Models;
 using System.Text.Json.Nodes;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace TranslaGenixAPI.Controllers
 {
@@ -39,20 +41,41 @@ namespace TranslaGenixAPI.Controllers
         [Route("userTransfer")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult AddNewUser([FromQuery][BindRequired] User user)
+        public ActionResult AddNewUser([FromBody] JsonInput? obj) //[FromQuery][BindRequired] User user
         {
-            //Try to add a new user
+            var events = obj.data.events;
+            var c = events.FirstOrDefault();
+            User newUser = new User();
+            if(c != null)
+            {
+                var e = c.target.FirstOrDefault();
+                if (e != null)
+                {
+                    string fullname = e.displayName;
+                    string[] namesplit = fullname.Split(' ');
+                    newUser.Username = (string)e.detailEntry;
+                    newUser.Email = e.alternateId;
+                    newUser.FirstName = namesplit[0];
+                    newUser.LastName = namesplit[1];
+                }
+                else
+                {
+                    return BadRequest("Issue with Json.");
+                }   
+            }
+            else
+            {
+                return BadRequest("Issue with Json.");
+            }
             try
             {
-                repo.AddUser(user);
+                repo.AddUser(newUser);
             }
             catch (Exception ex)
             {
-                //Log.Information("Excetion occured in @ AddNewUser in UserC: " + ex);
                 return BadRequest("Bad Request: " + ex);
             }
-            //Log.Information("New user created w/ username: " + UserName + " @ AddNewUser in UserC");
-            return CreatedAtAction("Get", user);
+            return CreatedAtAction("AddNewUser", newUser);
         }
 
         [HttpGet]
