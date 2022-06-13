@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers().AddNewtonsoftJson();
+
 ConfigurationManager Config = builder.Configuration;
 var pol = "allowedOrigins";
 builder.Services.AddCors(options =>
