@@ -148,7 +148,7 @@ namespace TranslaGenixAPI.Controllers
 
         [HttpGet]
         [Route("userTransfer")]
-        [Produces("application/json")]
+        [Produces("application/json")] //for Okta
         public ActionResult OktaGet([FromQuery] HttpRequestMessage request)
         {
             try
@@ -157,7 +157,10 @@ namespace TranslaGenixAPI.Controllers
                 var response = headerValues.FirstOrDefault();
                 if (response != null)
                 {
-                    return Ok(response);
+                    Dictionary<string, string> data = new Dictionary<string, string>();
+                    data.Add("verification", response);
+                    var j = JsonSerializer.Serialize(data);
+                    return Ok(j);
                 }
                 return BadRequest();
             }
