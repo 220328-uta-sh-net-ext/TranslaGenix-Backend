@@ -153,7 +153,7 @@ namespace TranslaGenixAPI.Controllers
         {
             try
             {
-                IEnumerable<string> headerValues = request.Headers.GetValues("x-okta-verification-challenge");
+                IEnumerable<string> headerValues = Request.Headers["x-okta-verification-challenge"];//GetValues("x-okta-verification-challenge");
                 var response = headerValues.FirstOrDefault();
                 if (response != null)
                 {
