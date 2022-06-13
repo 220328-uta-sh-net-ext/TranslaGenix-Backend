@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Models;
+using System.Text.Json.Nodes;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace TranslaGenixAPI.Controllers
 {
@@ -141,6 +144,27 @@ namespace TranslaGenixAPI.Controllers
                 return BadRequest("Bad Request: " + ex);
             }
             return Ok("user email has been updated");
+        }
+
+        [HttpGet]
+        [Route("userTransfer")]
+        [Produces("application/json")]
+        public ActionResult OktaGet([FromQuery] HttpRequestMessage request)
+        {
+            try
+            {
+                IEnumerable<string> headerValues = request.Headers.GetValues("x-okta-verification-challenge");
+                var response = headerValues.FirstOrDefault();
+                if (response != null)
+                {
+                    return Ok(response);
+                }
+                return BadRequest();
+            }
+            catch
+            {
+                return BadRequest(request);
+            }
         }
     }
 }
