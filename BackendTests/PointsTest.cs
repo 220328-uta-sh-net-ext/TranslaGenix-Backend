@@ -15,7 +15,7 @@ namespace BackendTests
     public class PointsTests
     {
 
-        [Fact]
+        /*[Fact]
         public void Get_AllPoints()
         {
             var fakeContext = A.Fake<TGContext>();
@@ -23,7 +23,7 @@ namespace BackendTests
 
             var ret = pr.GetAllPoints();
             Assert.NotNull(ret);
-        }
+        }*/
 
     }
 }
