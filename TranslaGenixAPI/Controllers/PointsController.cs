@@ -57,7 +57,7 @@ namespace TranslaGenixAPI.Controllers
         [Route("GetHighstPoint")]
         [ProducesResponseType(StatusCodes.Status200OK)]
 
-        public ActionResult<Point> GetHighestPoint()
+        public ActionResult GetHighestPoint()
         {
             Point newPoint = new Point();
             try
@@ -73,7 +73,7 @@ namespace TranslaGenixAPI.Controllers
         [HttpGet]
         [Route("GetPointByID")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<List<Point>> GetPointById(int id)
+        public ActionResult GetPointById(int id)
         {
             try
             {
@@ -88,7 +88,7 @@ namespace TranslaGenixAPI.Controllers
         [HttpGet]
         [Route("GetPointByUserName")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<List<Point>> GetPointByUserName(string UserName)
+        public ActionResult GetPointByUserName(string UserName)
         {
             try
             {
