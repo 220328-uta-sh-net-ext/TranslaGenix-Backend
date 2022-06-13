@@ -38,6 +38,26 @@ namespace DL.Migrations
                     table.PrimaryKey("PK_users", x => x.id);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "words",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    word = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    tag = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_words", x => x.id);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_points_userId",
+                table: "points",
+                column: "userId",
+                unique: true);
+
             migrationBuilder.CreateIndex(
                 name: "IX_users_email",
                 table: "users",
@@ -49,6 +69,12 @@ namespace DL.Migrations
                 table: "users",
                 column: "username",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_words_word",
+                table: "words",
+                column: "word",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -58,6 +84,9 @@ namespace DL.Migrations
 
             migrationBuilder.DropTable(
                 name: "users");
+
+            migrationBuilder.DropTable(
+                name: "words");
         }
     }
 }

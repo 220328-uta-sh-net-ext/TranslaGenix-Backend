@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers().AddNewtonsoftJson();
+
 ConfigurationManager Config = builder.Configuration;
 var pol = "allowedOrigins";
 builder.Services.AddCors(options =>
@@ -10,7 +12,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(
         name: pol,
         policy => {
-            policy.WithOrigins("'http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+            policy.WithOrigins("https://translagenix.azurewebsites.net/").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
         }
         );
 });
@@ -26,6 +28,8 @@ string connectionString = Config.GetConnectionString("SQLDatabase");
 builder.Services.AddDbContext<TGContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddScoped<IPointsRepo, PointsRepo>();
+builder.Services.AddScoped<IWordsRepo, WordsRepo>();
+builder.Services.AddScoped<ISimpleUserRepo, SimpleUserRepo>();
 
 var app = builder.Build();
 

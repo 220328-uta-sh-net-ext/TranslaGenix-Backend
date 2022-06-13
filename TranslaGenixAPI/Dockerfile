@@ -7,10 +7,12 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["TranslaGenixAPI.csproj", "."]
+COPY ["TranslaGenixAPI/TranslaGenixAPI.csproj", "./"]
+COPY ["DL/DL.csproj", "DL/"]
+COPY ["Models/Models.csproj", "Models/"]
 RUN dotnet restore "./TranslaGenixAPI.csproj"
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/TranslaGenixAPI"
 RUN dotnet build "TranslaGenixAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish

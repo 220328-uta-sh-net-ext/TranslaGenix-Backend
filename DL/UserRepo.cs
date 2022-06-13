@@ -13,14 +13,22 @@ namespace DL
         {
             db.users.Add(user);
             db.SaveChanges();
+            Point newPoint = new Point();
+            newPoint.userId = user.Id;
+            newPoint.Points = 0;
+            db.points.Add(newPoint);
+            db.SaveChanges();
             return user;
         }
 
-        public void DeleteUser(int id)
+        public void DeleteUser(string UserName)
         {
-            var deletethis = db.users.Where(u => u.Id == id).FirstOrDefault();
+            var deletethis = db.users.Where(u => u.Username == UserName).FirstOrDefault();
             if (deletethis != null)
             {
+                var deletePoint = db.points.Where(a => a.userId == deletethis.Id).FirstOrDefault();
+                if(deletePoint != null)
+                    db.points.Remove(deletePoint);
                 db.users.Remove(deletethis);
                 db.SaveChanges();
             }
@@ -45,11 +53,21 @@ namespace DL
             return db.users.Where(u => u.Email == email).FirstOrDefault();
         }
 
-        public User Update(User user)
+        public User Update(string email, string newusername, string newFirstName, string newLastName)
         {
-            db.users.Update(user);
-            db.SaveChanges();
-            return user;
+            var _user = db.users.FirstOrDefault(u => u.Email == email);
+            if (_user != null)
+            {
+                if(newFirstName != null && newFirstName != "")
+                    _user.FirstName = newFirstName;
+                if (newLastName != null && newLastName != "")
+                    _user.LastName = newLastName;
+                if (newusername != null && newusername != "")
+                    _user.Username = newusername;
+                db.users.Update(_user);
+                db.SaveChanges();
+            }
+            return _user;
         }
     }
 }

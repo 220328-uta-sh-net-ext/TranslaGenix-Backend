@@ -69,16 +69,27 @@ namespace DL
         public Point GetPointByUserName(string UserName)
         {
             var temp = db.users.Where(u => u.Username == UserName).FirstOrDefault();
-            if( temp != null )
-                return db.points.Where(u => u.Id == temp.Id).FirstOrDefault();
+            if (temp != null)
+            {
+                var point = db.points.Where(u => u.userId == temp.Id).FirstOrDefault();
+                if (point != null)
+                {
+                    point.Points += 1;
+                    return UpdatePoints(point);
+                }
+                return default;
+            }
             return default;
         }
 
         public Point IncreasePointsById(int id)
         {
-            var temp = db.points.Where(u => u.Id == id).FirstOrDefault();
+            var temp = db.points.Where(u => u.userId == id).FirstOrDefault();
             if (temp != null)
+            {
+                temp.Points += 1;
                 return UpdatePoints(temp);
+            }
             return default;
         }
 
@@ -89,7 +100,10 @@ namespace DL
                 return default;
             var tempPoints = db.points.Where(u => u.Id == tempUser.Id).FirstOrDefault();
             if (tempPoints != null)
+            {
+                tempPoints.Points += 1;
                 return UpdatePoints(tempPoints);
+            }
             return default;
         }
 
@@ -98,6 +112,11 @@ namespace DL
             db.points.Update(point);
             db.SaveChanges();
             return point;
+        }
+
+        public string getUserNameByPoints(Point point)
+        {
+            return db.users.Where(u => u.Id == point.userId).FirstOrDefault().Username;
         }
     }
 }
