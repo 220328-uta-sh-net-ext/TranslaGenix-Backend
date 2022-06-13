@@ -36,7 +36,7 @@ namespace TranslaGenixAPI.Controllers
             return Ok(users);
         }
         [HttpPost]
-        [Route("AddUser")]
+        [Route("userTransfer")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult AddNewUser([FromQuery][BindRequired] User user)
@@ -145,7 +145,8 @@ namespace TranslaGenixAPI.Controllers
             }
             return Ok("user email has been updated");
         }
-
+        /*
+         * Used for 1 time Okta Connection
         [HttpGet]
         [Route("userTransfer")]
         [Produces("application/json")] //for Okta
@@ -167,6 +168,6 @@ namespace TranslaGenixAPI.Controllers
             {
                 return BadRequest(request);
             }
-        }
+        }*/
     }
 }

@@ -19,7 +19,7 @@ namespace TranslaGenixAPI.Controllers
         [HttpGet]
         [Route("GetAllPoints")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<List<Point>> Get()
+        public ActionResult Get()
         {
             try
             {
