@@ -69,10 +69,5 @@ namespace DL
             }
             return _user;
         }
-
-        public User Update()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
