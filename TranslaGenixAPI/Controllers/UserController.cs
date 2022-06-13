@@ -159,7 +159,6 @@ namespace TranslaGenixAPI.Controllers
                 {
                     Dictionary<string, string> data = new Dictionary<string, string>();
                     data.Add("verification", response);
-                    var j = JsonSerializer.Serialize(data);
                     return Ok(j);
                 }
                 return BadRequest();
