@@ -15,7 +15,7 @@ namespace BackendTests
         [Fact]
         public async Task Test1()
         {
-            int count = 3;
+            /*int count = 3;
             var fakeUsers = A.CollectionOfDummy<SimpleUser>(count).AsEnumerable();
             var dataStore = A.Fake<ISimpleUserRepo>();
             //A.CallTo(() => dataStore.GetAllSimpleUsers().Returns(Task.FromResult(fakeUsers));
@@ -25,7 +25,11 @@ namespace BackendTests
 
             var result = actionResult.Result as OkObjectResult;
             var returndata = result.Value as List<SimpleUser>;
-            Assert.Equal(count, returndata.Count);
+            Assert.Equal(count, returndata.Count);*/
+            var fakeContext = A.Fake<TGContext>();
+            PointsRepo pr = new PointsRepo(fakeContext);
+            var PointCheck = new PointsController(pr);
+            Assert.NotNull(PointCheck);
 
         }
     }
