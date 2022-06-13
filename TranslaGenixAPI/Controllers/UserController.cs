@@ -159,7 +159,7 @@ namespace TranslaGenixAPI.Controllers
                 {
                     Dictionary<string, string> data = new Dictionary<string, string>();
                     data.Add("verification", response);
-                    return Ok(j);
+                    return Ok(data);
                 }
                 return BadRequest();
             }
