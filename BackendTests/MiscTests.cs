@@ -56,6 +56,24 @@ namespace BackendTests
         {
             JsonInput j = new JsonInput();
             j.eventType = null;
+            j.eventTypeVersion = null;
+            j.cloudEventsVersion = null;
+            j.source = null;
+            j.eventId = null;
+            j.contentType = null;
+            j.data = new Data();
+            /*j.data.events.Add(new Event());
+            j.data.events[0].uuid = null;
+            j.data.events[0].published = null;
+            j.data.events[0].eventType = null;
+            j.data.events[0].version = null;
+            j.data.events[0].displayMessage = null;
+            j.data.events[0].severity = null;
+            j.data.events[0].client = new Client();
+            j.data.events[0].device = null;
+            j.data.events[0].actor = new Actor();
+            j.data.events[0].target.Add(new Target());
+            j.data.events[0].transaction = new Transaction();*/
             Assert.Equal(null, j.eventType);
         }
     }
