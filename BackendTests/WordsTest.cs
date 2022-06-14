@@ -18,10 +18,8 @@ namespace BackendTests
         {
             var mockRepo = new Mock<IWordsRepo>();
             mockRepo.Setup(x => x.GetAllWords()).Returns(new List<Words>());
-
             var mockCont = new WordsController(mockRepo.Object);
-
-            ActionResult actionResult = mockCont.Ok();
+            ActionResult actionResult = mockCont.Get();
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotNull(actionResult);
         }
 
@@ -33,10 +31,10 @@ namespace BackendTests
             var mockPoint = new Words();
             mockRepo.Setup(x => x.GetRandomWord());
             var mockCont = new WordsController(mockRepo.Object);
-            ActionResult actionResult = mockCont.Ok();
+            ActionResult actionResult = mockCont.GetRandomWord();
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotNull(actionResult);
         }
-        
+
         [Fact]
         public void Get_WordByTag()
         {
@@ -47,7 +45,7 @@ namespace BackendTests
             mockWord.Tag = "cba";
             mockRepo.Setup(x => x.GetWordsByTag(It.IsAny<string>()));
             var mockCont = new WordsController(mockRepo.Object);
-            ActionResult actionResult = mockCont.Ok("test");
+            ActionResult actionResult = mockCont.Get("test");
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotNull(actionResult);
         }
 
@@ -60,6 +58,6 @@ namespace BackendTests
             var mockCont = new WordsController(mockRepo.Object);
             ActionResult actionResult = mockCont.AddNewWord(mockword);
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotNull(actionResult);
-        } 
+        }
     }
 }
