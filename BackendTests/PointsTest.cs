@@ -2,10 +2,8 @@
 using Models;
 using TranslaGenixAPI.Controllers;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System.Web.Http;
-using System.Web.Http.Results;
+
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
 
