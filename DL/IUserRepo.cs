@@ -34,6 +34,12 @@ namespace DL
         /// <returns>Returns a user found by their email. Returns null otherwise.</returns>
         User GetUserByEmail(string Email);
         /// <summary>
+        /// Gets a user by a specific Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Returns a user found by their id. Returns null otherwise.</returns>
+        User GetUserById(int id);
+        /// <summary>
         /// Updates an exisiting user
         /// </summary>
         /// <param name="user"></param>

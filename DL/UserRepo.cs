@@ -53,6 +53,11 @@ namespace DL
             return db.users.Where(u => u.Email == email).FirstOrDefault();
         }
 
+        public User GetUserById(int id)
+        {
+            return db.users.Where(u => u.Id == id).FirstOrDefault();
+        }
+
         public User Update(string email, string newusername, string newFirstName, string newLastName)
         {
             var _user = db.users.FirstOrDefault(u => u.Email == email);

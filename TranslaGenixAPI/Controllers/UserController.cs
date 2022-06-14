@@ -122,6 +122,23 @@ namespace TranslaGenixAPI.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("GetUserById")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public ActionResult GetById(int id)
+        {
+            try
+            {
+                var filteredfirstname = repo.GetUserById(id);
+                return Ok(filteredfirstname);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"User with firstname: {id} is not in the database");
+            }
+        }
+
         [HttpDelete]
         [Route("DeleteUser")]
         [ProducesResponseType(200)]
