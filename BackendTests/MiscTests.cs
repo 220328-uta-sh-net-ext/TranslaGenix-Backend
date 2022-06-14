@@ -30,7 +30,7 @@ namespace BackendTests
 
         }
         [Fact]
-        public void SimpleTest()
+        public void UserTest()
         {
             User newUser = new User();
             newUser.Username = "test";
@@ -40,6 +40,23 @@ namespace BackendTests
             newUser.Id = 1;
 
             Assert.Equal(1, newUser.Id);
+        }
+
+        [Fact]
+        public void LeaderBoardTest()
+        {
+            LeaderBoard l = new LeaderBoard();
+            l.Name = "Test";
+            l.point = 0;
+            Assert.Equal(0, l.point);
+        }
+
+        [Fact]
+        public void JsonInputTest()
+        {
+            JsonInput j = new JsonInput();
+            j.eventType = null;
+            Assert.Equal(null, j.eventType);
         }
     }
 }
