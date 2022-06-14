@@ -53,7 +53,7 @@ namespace TranslaGenixAPI.Controllers
                 {
                     string fullname = e.displayName;
                     string[] namesplit = fullname.Split(' ');
-                    newUser.Username = (string)e.detailEntry;
+                    newUser.Username = fullname;
                     newUser.Email = e.alternateId;
                     newUser.FirstName = namesplit[0];
                     newUser.LastName = namesplit[1];
