@@ -68,7 +68,8 @@ namespace DL
 
         public Point GetPointByUserName(string UserName)
         {
-            var temp = db.users.Where(u => u.Username == UserName).FirstOrDefault();
+            //changed to be by firstname instead
+            var temp = db.users.Where(u => u.FirstName == UserName).FirstOrDefault();
             if (temp != null)
             {
                 var point = db.points.Where(u => u.userId == temp.Id).FirstOrDefault();

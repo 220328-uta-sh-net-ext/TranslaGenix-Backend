@@ -141,7 +141,7 @@ namespace TranslaGenixAPI.Controllers
         }
 
         [HttpPut]
-        [Route("IncreasePointsByUserName")]
+        [Route("IncreasePointsByFirstName")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult IncreasePointsByUserName(string username)
