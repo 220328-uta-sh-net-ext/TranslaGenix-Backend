@@ -16,7 +16,7 @@ namespace DL
         public DbSet<User> users { get; set; }
         public DbSet<Point> points { get; set; }
         public DbSet<Words> wordList { get; set; }
-        public DbSet<SimpleUser> simpleUserList { get; set; }
+        //public DbSet<SimpleUser> simpleUserList { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
@@ -31,10 +31,10 @@ namespace DL
                 .Property(a => a.Id)
                 .HasColumnName("id")
                 .ValueGeneratedOnAdd();
-            modelBuilder.Entity<SimpleUser>()
+            /*modelBuilder.Entity<SimpleUser>()
                 .Property(a => a.Id)
                 .HasColumnName("id")
-                .ValueGeneratedOnAdd();
+                .ValueGeneratedOnAdd();*/
         }
         // dotnet ef migrations add AddSimpleUser -c TGContext --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj
         // dotnet ef database update --startup-project ../TranslaGenixAPI/TranslaGenixAPI.csproj

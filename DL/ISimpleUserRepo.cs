@@ -1,4 +1,4 @@
-﻿using Models;
+﻿/*using Models;
 
 namespace DL
 {
@@ -9,3 +9,4 @@ namespace DL
         Task DeleteSimpleUser(string UserName);
     }
 }
+*/
