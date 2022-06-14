@@ -20,7 +20,7 @@ namespace TranslaGenixAPI.Controllers
         [Route("GetAllWords")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public ActionResult<List<Words>> Get()
+        public ActionResult Get()
         {
             try
             {
@@ -37,7 +37,7 @@ namespace TranslaGenixAPI.Controllers
         [Route("GetRandomWord")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public ActionResult<Words> GetRandomWord()
+        public ActionResult GetRandomWord()
         {
             var word = new Words();
             try
@@ -55,7 +55,7 @@ namespace TranslaGenixAPI.Controllers
         [Route("GetWordByTag")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public ActionResult<List<Words>> Get(String tag)
+        public ActionResult Get(String tag)
         {
             List<Words> tempList = new List<Words>();
             try

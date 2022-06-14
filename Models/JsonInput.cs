@@ -112,7 +112,7 @@ namespace Models
         public string? type { get; set; }
         public string alternateId { get; set; }
         public string displayName { get; set; }
-        public object detailEntry { get; set; }
+        public object? detailEntry { get; set; }
     }
 
     public class Transaction
