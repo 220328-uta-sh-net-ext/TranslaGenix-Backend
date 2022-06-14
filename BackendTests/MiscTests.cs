@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace BackendTests
 {
-    public class PointsControllerTests
+    public class MiscTests
     {
         [Fact]
         public void Test1()
@@ -28,6 +28,18 @@ namespace BackendTests
             var PointCheck = new PointsController(pr);
             Assert.NotNull(PointCheck);
 
+        }
+        [Fact]
+        public void SimpleTest()
+        {
+            User newUser = new User();
+            newUser.Username = "test";
+            newUser.FirstName = "test";
+            newUser.LastName = "test";
+            newUser.Email = "test";
+            newUser.Id = 1;
+
+            Assert.Equal(1, newUser.Id);
         }
     }
 }
