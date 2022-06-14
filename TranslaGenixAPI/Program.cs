@@ -29,7 +29,7 @@ builder.Services.AddDbContext<TGContext>(options => options.UseSqlServer(connect
 builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddScoped<IPointsRepo, PointsRepo>();
 builder.Services.AddScoped<IWordsRepo, WordsRepo>();
-builder.Services.AddScoped<ISimpleUserRepo, SimpleUserRepo>();
+//builder.Services.AddScoped<ISimpleUserRepo, SimpleUserRepo>();
 
 var app = builder.Build();
 

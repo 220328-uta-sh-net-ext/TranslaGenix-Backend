@@ -1,4 +1,4 @@
-﻿using DL;
+﻿/*using DL;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Models;
@@ -70,3 +70,4 @@ namespace TranslaGenixAPI.Controllers
         }
     }
 }
+*/
