@@ -1,12 +1,7 @@
 ﻿using DL;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Models;
-using System.Text.Json.Nodes;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+
 
 namespace TranslaGenixAPI.Controllers
 {
@@ -23,7 +18,7 @@ namespace TranslaGenixAPI.Controllers
         [HttpGet]
         [Route("GetAllUsers")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<List<User>> Get()
+        public ActionResult Get()
         {
             try
             {
@@ -81,7 +76,7 @@ namespace TranslaGenixAPI.Controllers
         [HttpGet]
         [Route("GetUserByUsername")]
         [ProducesResponseType(200)]
-        public ActionResult<List<User>> GetbyUsername(string username)
+        public ActionResult GetbyUsername(string username)
         {
             try
             {
