@@ -48,6 +48,15 @@ namespace BackendTests
             ActionResult actionResult = mockCont.GetbyFirstname("test");
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotNull(actionResult);
         }
+        [Fact]
+        public void GetByIdTest()
+        {
+            var mockRepo = new Mock<IUserRepo>();
+            mockRepo.Setup(x => x.GetUserById(It.IsAny<int>())).Returns(new User());
+            var mockCont = new UserController(mockRepo.Object);
+            ActionResult actionResult = mockCont.GetById(1);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotNull(actionResult);
+        }
 
         [Fact]
         public void DeleteUserTest()
