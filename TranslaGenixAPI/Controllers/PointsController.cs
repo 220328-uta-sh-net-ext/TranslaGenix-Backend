@@ -196,7 +196,7 @@ namespace TranslaGenixAPI.Controllers
         [Route("GetLeaderboard")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(400)]
-        public ActionResult<List<LeaderBoard>> GetLeaderBoard()
+        public ActionResult GetLeaderBoard()
         {
             List<Point> listofpoints = new List<Point>();
             try
